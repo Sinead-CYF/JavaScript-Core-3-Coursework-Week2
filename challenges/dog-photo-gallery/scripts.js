@@ -7,10 +7,9 @@ function addImg(){
         return response.json();
     })
     .then(function (data){
-        const img = document.createElement("img");
-        img.classList.add("img");
+        const img = document.querySelector("#img");
+        imgWrapper.style.display = "block";
         img.src = data.message;
-        imgWrapper.appendChild(img);
     })
     .catch(function (error){
         console.log(`Error: ${error}`);
